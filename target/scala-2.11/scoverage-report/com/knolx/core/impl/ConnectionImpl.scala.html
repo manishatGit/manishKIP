@@ -1,0 +1,325 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/knolx/core/impl/ConnectionImpl.scala.html
+        </title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/addons/pager/jquery.tablesorter.pager.min.js"></script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>/*
+</span>2 <span style=''> * Class: ConnectionImpl Implements trait Connection to create a database
+</span>3 <span style=''> * connection
+</span>4 <span style=''> */
+</span>5 <span style=''>package com.knolx.core.impl
+</span>6 <span style=''>
+</span>7 <span style=''>import com.knol.db.connection.Connection
+</span>8 <span style=''>import java.sql._
+</span>9 <span style=''>import java.sql.DriverManager
+</span>10 <span style=''>class ConnectionImpl extends Connection {
+</span>11 <span style=''>
+</span>12 <span style=''>  /*
+</span>13 <span style=''>   * Method: returns database connection, uses database url,username, password
+</span>14 <span style=''>   * from the trait: Connection
+</span>15 <span style=''>   */
+</span>16 <span style=''>  def getConnection(): Option[java.sql.Connection] = {
+</span>17 <span style=''>    try {
+</span>18 <span style=''>      </span><span style='background: #AEF1AE'>Class.forName(config.getString("db.driver"));
+</span>19 <span style=''></span><span style='background: #AEF1AE'>      val conn = DriverManager.getConnection(url + "?user=" + usr + "&password=" + password)
+</span>20 <span style=''></span><span style='background: #AEF1AE'>      Some(conn)</span><span style=''>
+</span>21 <span style=''>    } catch {
+</span>22 <span style=''>      case e: Exception =>
+</span>23 <span style=''>        </span><span style='background: #F0ADAD'>e.printStackTrace()</span><span style=''>
+</span>24 <span style=''>        </span><span style='background: #F0ADAD'>None</span><span style=''>
+</span>25 <span style=''>    }
+</span>26 <span style=''>  }
+</span>27 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          449
+          -
+          604
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  java.this.lang.Class.forName(ConnectionImpl.this.config.getString(&quot;db.driver&quot;));
+  val conn: java.sql.Connection = java.sql.DriverManager.getConnection(ConnectionImpl.this.url.+(&quot;?user=&quot;).+(ConnectionImpl.this.usr).+(&quot;&amp;password=&quot;).+(ConnectionImpl.this.password));
+  scala.Some.apply[java.sql.Connection](conn)
+}
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          449
+          -
+          493
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.forName
+        </td>
+        <td style="background: #AEF1AE">
+          java.this.lang.Class.forName(ConnectionImpl.this.config.getString(&quot;db.driver&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          463
+          -
+          492
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.Config.getString
+        </td>
+        <td style="background: #AEF1AE">
+          ConnectionImpl.this.config.getString(&quot;db.driver&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          563
+          -
+          575
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&amp;password=&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          512
+          -
+          587
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.sql.DriverManager.getConnection
+        </td>
+        <td style="background: #AEF1AE">
+          java.sql.DriverManager.getConnection(ConnectionImpl.this.url.+(&quot;?user=&quot;).+(ConnectionImpl.this.usr).+(&quot;&amp;password=&quot;).+(ConnectionImpl.this.password))
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          540
+          -
+          586
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          ConnectionImpl.this.url.+(&quot;?user=&quot;).+(ConnectionImpl.this.usr).+(&quot;&amp;password=&quot;).+(ConnectionImpl.this.password)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          557
+          -
+          560
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knol.db.connection.Connection.usr
+        </td>
+        <td style="background: #AEF1AE">
+          ConnectionImpl.this.usr
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          546
+          -
+          554
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;?user=&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          578
+          -
+          586
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.knol.db.connection.Connection.password
+        </td>
+        <td style="background: #AEF1AE">
+          ConnectionImpl.this.password
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          594
+          -
+          604
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[java.sql.Connection](conn)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          654
+          -
+          673
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Throwable.printStackTrace
+        </td>
+        <td style="background: #F0ADAD">
+          e.printStackTrace()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          682
+          -
+          686
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

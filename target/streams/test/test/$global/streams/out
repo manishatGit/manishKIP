@@ -1,0 +1,20 @@
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.KnolSessionRepoImplTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.DeleteNonExistingKnolderTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.GetKnolderListTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.GetKnolSessionListTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.CreateKnolderTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.UpdateKnolSessionTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.knolx.core.impl.KnolRepoImplTest, org.scalatest.tools.Framework$$anon$1@7a3015a9, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 8 seconds, 403 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 18[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 7, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 18, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.UpdateKnolSessionTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.GetKnolSessionListTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.KnolSessionRepoImplTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.CreateKnolderTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.DeleteNonExistingKnolderTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.GetKnolderListTest[0m
+[0m[[0mdebug[0m] [0m	com.knolx.core.impl.KnolRepoImplTest[0m

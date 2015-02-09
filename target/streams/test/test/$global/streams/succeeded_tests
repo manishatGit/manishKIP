@@ -1,0 +1,9 @@
+#Successful Tests
+#Mon Feb 09 15:43:11 IST 2015
+com.knolx.core.impl.GetKnolderListTest=1423476788043
+com.knolx.core.impl.KnolRepoImplTest=1423476791250
+com.knolx.core.impl.GetKnolSessionListTest=1423476788654
+com.knolx.core.impl.KnolSessionRepoImplTest=1423476787944
+com.knolx.core.impl.UpdateKnolSessionTest=1423476789245
+com.knolx.core.impl.CreateKnolderTest=1423476788694
+com.knolx.core.impl.DeleteNonExistingKnolderTest=1423476787982

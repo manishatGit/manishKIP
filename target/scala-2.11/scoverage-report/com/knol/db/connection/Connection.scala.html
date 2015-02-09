@@ -1,0 +1,186 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/knol/db/connection/Connection.scala.html
+        </title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.3/addons/pager/jquery.tablesorter.pager.min.js"></script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>/*
+</span>2 <span style=''> * Trait: Connection provides basic functionality of creating a database
+</span>3 <span style=''> * connection. Initializes values of database url, user, passwords configured in
+</span>4 <span style=''> * configuration file application.conf
+</span>5 <span style=''> */
+</span>6 <span style=''>package com.knol.db.connection
+</span>7 <span style=''>
+</span>8 <span style=''>import com.typesafe.config.ConfigFactory
+</span>9 <span style=''>import java.sql._
+</span>10 <span style=''>import org.slf4j.LoggerFactory
+</span>11 <span style=''>trait Connection {
+</span>12 <span style=''>  val logger = </span><span style='background: #AEF1AE'>LoggerFactory.getLogger(this.getClass)</span><span style=''>
+</span>13 <span style=''>  val config = </span><span style='background: #AEF1AE'>ConfigFactory.load()</span><span style=''>
+</span>14 <span style=''>  val url = </span><span style='background: #AEF1AE'>config.getString("db.url")</span><span style=''>
+</span>15 <span style=''>  val usr = </span><span style='background: #AEF1AE'>config.getString("db.user")</span><span style=''>
+</span>16 <span style=''>  val password = </span><span style='background: #AEF1AE'>config.getString("db.pass")</span><span style=''>
+</span>17 <span style=''>    def getConnection(): Option[java.sql.Connection]
+</span>18 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          356
+          -
+          394
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.LoggerFactory.getLogger
+        </td>
+        <td style="background: #AEF1AE">
+          org.slf4j.LoggerFactory.getLogger(this.getClass())
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          380
+          -
+          393
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.getClass
+        </td>
+        <td style="background: #AEF1AE">
+          this.getClass()
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          410
+          -
+          430
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.ConfigFactory.load
+        </td>
+        <td style="background: #AEF1AE">
+          com.typesafe.config.ConfigFactory.load()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          443
+          -
+          469
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.Config.getString
+        </td>
+        <td style="background: #AEF1AE">
+          Connection.this.config.getString(&quot;db.url&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          482
+          -
+          509
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.Config.getString
+        </td>
+        <td style="background: #AEF1AE">
+          Connection.this.config.getString(&quot;db.user&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          527
+          -
+          554
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.Config.getString
+        </td>
+        <td style="background: #AEF1AE">
+          Connection.this.config.getString(&quot;db.pass&quot;)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

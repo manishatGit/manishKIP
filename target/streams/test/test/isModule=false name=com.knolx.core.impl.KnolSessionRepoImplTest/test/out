@@ -1,0 +1,8 @@
+[0m[[0minfo[0m] [0m[32mKnolSessionRepoImplTest:[0m[0m
+[0m[[0minfo[0m] [0m[32m- Creating the record KnolSession By giving Wrong Date format[0m[0m
+[0m[[0minfo[0m] [0m[32m- Creating the record KnolSession[0m[0m
+[0m[[0minfo[0m] [0m[32m- Updating the record KnolSession[0m[0m
+[0m[[0minfo[0m] [0m[32m- Updating the record KnolSession By giving Wrong ID format[0m[0m
+[0m[[0minfo[0m] [0m[32m- Deleting the record KnolSession By giving Wrong ID format[0m[0m
+[0m[[0minfo[0m] [0m[32m- Deleting the record KnolSession[0m[0m
+[0m[[0minfo[0m] [0m[32m- Fetching the list KnolSessions[0m[0m
